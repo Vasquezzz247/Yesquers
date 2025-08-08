@@ -2,7 +2,416 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+html {
+    scroll-behavior: smooth;
 }
+
+/* navbar animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float-delayed {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-shimmer {
+    background-size: 200% 200%;
+    animation: shimmer 3s linear infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 30s linear infinite;
+}
+
+.animate-bounce-slow {
+    animation: float 15s ease-in-out infinite;
+}
+
+/* Hero animations */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes spin-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-shimmer {
+    background-size: 200% 200%;
+    animation: shimmer 3s linear infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+.animate-shimmer {
+    background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-shimmer {
+    background-size: 200% 200%;
+    animation: shimmer 3s linear infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 20s linear infinite;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-shimmer {
+    background-size: 200% 200%;
+    animation: shimmer 3s linear infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 20s linear infinite;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out both;
+}
+
+.transition-fade {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.opacity-0 {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.opacity-100 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Animaciones generales de entrada y flotación === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatSlow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.transition-fade {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* === Para usar con useInView === */
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+.animate-float-slow {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* === Brillo sutil para tarjetas === */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.animate-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* 🧠 Fondo psicodélico animado con líneas */
+
+/*
+.trippy-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #1a1a2e, #191924);
+    background-size: 300% 300%;
+    animation: trippyGradient 20s ease infinite;
+}
+    */
+
+/* 🌌 Fondo psicodélico avanzado con ondas y neón */
+.trippy-bg {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 20% 30%, #1a1a2e, #0f0c29, #000000);
+    background-size: 400% 400%;
+    animation: trippyGradient 20s ease infinite;
+}
+
+/* 🌈 Ondas psicodélicas */
+.trippy-bg::before,
+.trippy-bg::after {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: repeating-radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08) 0px,
+        rgba(255, 255, 255, 0.08) 2px,
+        transparent 3px,
+        transparent 100px
+    );
+    animation: floatLines 60s linear infinite;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.trippy-bg::after {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 255, 200, 0.08) 0px,
+        rgba(0, 255, 200, 0.08) 2px,
+        transparent 3px,
+        transparent 30px
+    );
+    animation: moveNeon 30s linear infinite;
+}
+
+/* 🔮 Animación de degradado */
+@keyframes trippyGradient {
+    0% {
+        background-position: 0% 50%;
+        background-color: #0f0c29;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #3a0ca3;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #0f0c29;
+    }
+}
+
+/* 🌐 Movimiento lento de las ondas */
+@keyframes floatLines {
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(15%, 15%);
+    }
+}
+
+/* 💡 Movimiento del patrón de neón */
+@keyframes moveNeon {
+    from {
+        transform: translate(-10%, -10%) rotate(0deg);
+    }
+    to {
+        transform: translate(10%, 10%) rotate(360deg);
+    }
+}
+

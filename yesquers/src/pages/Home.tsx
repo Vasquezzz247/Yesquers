@@ -1,23 +1,22 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import RarityCard from "../components/RarityCard";
-import FeaturedNFT from "../components/FeaturedNFT";
-import CTA from "../components/CTA";
+import DropInfo from "../components/DropInfo";
+import WelcomeSection from "../components/WelcomeSection";
 import Footer from "../components/Footer";
 
 const Home = () => (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700 to-yellow-300 text-white">
+    //<div className="min-h-screen trippy-bg text-white relative z-0">
+    <div className="min-h-screen trippy-bg text-white relative z-0">
+    <div className="flex flex-col space-y-16 relative z-10">
         <Navbar />
         <Hero />
-        <section className="flex justify-center space-x-4 p-10">
-            <RarityCard rarity="rarity 1 of 2500" title="The real G" description="Ultra rare legendary yesquers" />
-            <RarityCard rarity="rarity 25 of 2500" title="The trippy ones" description="Psychedelic masterpieces" />
-            <RarityCard rarity="rarity 50 of 2500" title="og chill" description="Original chill vibes collection" />
-        </section>
-        <FeaturedNFT />
-        <CTA />
+        <DropInfo />
+        <WelcomeSection />
         <Footer />
     </div>
+</div>
+
 );
 
 export default Home;
+
