@@ -2,6 +2,8 @@
 
 **Made by Yesquers for Yesquers**
 
+![Demo](yesquers/src/assets/test1.gif)
+
 ```bash
 docker compose up --build
 docker compose up
