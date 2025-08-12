@@ -1,0 +1,74 @@
+/* 🌌 Fondo psicodélico avanzado con ondas y neón */
+.trippy-bg {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 20% 30%, #1a1a2e, #0f0c29, #000000);
+    background-size: 400% 400%;
+    animation: trippyGradient 20s ease infinite;
+}
+
+/* 🌈 Ondas psicodélicas */
+.trippy-bg::before,
+.trippy-bg::after {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: repeating-radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.08) 0px,
+        rgba(255, 255, 255, 0.08) 2px,
+        transparent 3px,
+        transparent 100px
+    );
+    animation: floatLines 60s linear infinite;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.trippy-bg::after {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 255, 200, 0.08) 0px,
+        rgba(0, 255, 200, 0.08) 2px,
+        transparent 3px,
+        transparent 30px
+    );
+    animation: moveNeon 30s linear infinite;
+}
+
+/* 🔮 Animación de degradado */
+@keyframes trippyGradient {
+    0% {
+        background-position: 0% 50%;
+        background-color: #0f0c29;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #3a0ca3;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #0f0c29;
+    }
+}
+
+/* 🌐 Movimiento lento de las ondas */
+@keyframes floatLines {
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(15%, 15%);
+    }
+}
+
+/* 💡 Movimiento del patrón de neón */
+@keyframes moveNeon {
+    from {
+        transform: translate(-10%, -10%) rotate(0deg);
+    }
+    to {
+        transform: translate(10%, 10%) rotate(360deg);
+    }
+}
