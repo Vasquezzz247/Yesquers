@@ -6,13 +6,17 @@ import Footer from "../components/Footer";
 
 const Home = () => (
     <div className="min-h-screen trippy-bg text-white">
-        <div className="flex flex-col space-y-16">
-            <Navbar />
+        <Navbar />
+        <div className="mt-16">
             <Hero />
-            <DropInfo />
-            <WelcomeSection />
-            <Footer />
         </div>
+        <div className="mt-10">
+            <DropInfo />
+        </div>
+        <div className="mt-10">
+            <WelcomeSection />
+        </div>
+        <Footer />
     </div>
 );
 
