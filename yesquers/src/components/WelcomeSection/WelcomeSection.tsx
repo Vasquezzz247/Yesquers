@@ -1,5 +1,5 @@
 import { Twitter } from "lucide-react";
-import useInView from "../hooks/useInView";
+import useInView from "../../hooks/useInView";
 
 const WelcomeSection = () => {
     const { ref, isVisible } = useInView();

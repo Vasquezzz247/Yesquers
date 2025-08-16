@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import DropInfo from "../components/DropInfo/DropInfo";
-import WelcomeSection from "../components/WelcomeSection";
+import WelcomeSection from "../components/WelcomeSection/WelcomeSection";
 import Footer from "../components/Footer/Footer";
 
 const Home = () => (
