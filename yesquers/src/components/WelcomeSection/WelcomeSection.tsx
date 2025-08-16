@@ -4,17 +4,12 @@ import useInView from "../../hooks/useInView";
 const WelcomeSection = () => {
     const { ref, isVisible } = useInView();
 
-    // 🔮 Card inline
     const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
         <div className={className}>{children}</div>
     );
 
     const CardContent = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
         <div className={className}>{children}</div>
-    );
-
-    const Badge = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-        <span className={`px-3 py-1 rounded-full text-sm font-medium border ${className}`}>{children}</span>
     );
 
     return (
