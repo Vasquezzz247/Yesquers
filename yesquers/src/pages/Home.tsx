@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import DropInfo from "../components/DropInfo";
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import DropInfo from "../components/DropInfo/DropInfo";
 import WelcomeSection from "../components/WelcomeSection";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => (
     <div className="min-h-screen trippy-bg text-white">

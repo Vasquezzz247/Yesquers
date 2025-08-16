@@ -1,10 +1,21 @@
-import { Card, CardContent } from "./Card";
-import Button from "./Button";
 import { Twitter } from "lucide-react";
 import useInView from "../hooks/useInView";
 
 const WelcomeSection = () => {
     const { ref, isVisible } = useInView();
+
+    // 🔮 Card inline
+    const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+        <div className={className}>{children}</div>
+    );
+
+    const CardContent = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+        <div className={className}>{children}</div>
+    );
+
+    const Badge = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+        <span className={`px-3 py-1 rounded-full text-sm font-medium border ${className}`}>{children}</span>
+    );
 
     return (
         <section className="mb-20 px-4 w-full flex justify-center">
@@ -12,15 +23,15 @@ const WelcomeSection = () => {
                 ref={ref}
                 className={`transition-fade duration-700 ${isVisible ? "opacity-100" : "opacity-0"} w-full max-w-[100rem]`}
             >
-                <Card className="w-full bg-black/30 backdrop-blur-md border border-pink-500/30 shadow-2xl shadow-pink-500/20 animate-float-slow flex items-center">
-                    <CardContent className="p-12 w-full text-center">
+                <Card className="w-full bg-black/40 backdrop-blur-lg border-2 border-purple-600/40 shadow-2xl shadow-purple-900/30 animate-float-slow flex items-center">
+                    <CardContent className="p-12 w-full text-center text-slate-200">
                         {/* ✨ Título principal */}
-                        <h2 className="text-4xl font-bold bg-gradient-to-r from-green-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6 animate-shimmer">
+                        <h2 className="text-4xl font-bold psych-text mb-6">
                             Welcome yesquers
                         </h2>
 
                         {/* 🧘 Descripción */}
-                        <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                        <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
                             Step into a world where creativity meets consciousness. Join our community of like-minded souls
                             who appreciate the finer things in life and the art of being chill.
                         </p>
@@ -45,7 +56,7 @@ const WelcomeSection = () => {
                                 href="https://opensea.io/collection/yesquers"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-purple-600/80 hover:bg-purple-600 text-white font-bold px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
+                                className="bg-gradient-to-r from-purple-700 to-violet-700 hover:from-purple-600 hover:to-violet-600 text-white font-bold px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
                             >
                                 View Collection
                             </a>
@@ -53,7 +64,7 @@ const WelcomeSection = () => {
                                 href="https://opensea.io/collection/yesquers/overview"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-pink-600/80 hover:bg-pink-600 text-white font-bold px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
+                                className="bg-gradient-to-r from-indigo-700 to-purple-700 hover:from-indigo-600 hover:to-purple-600 text-white font-bold px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
                             >
                                 More about the yesquers
                             </a>

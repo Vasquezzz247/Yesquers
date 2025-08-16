@@ -6,272 +6,94 @@ html {
     scroll-behavior: smooth;
 }
 
-/* navbar animations */
-
-/* Hero animations */
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-@keyframes float-slow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes spin-slow {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.animate-shimmer {
-    background-size: 200% 200%;
-    animation: shimmer 3s linear infinite;
-}
-
-.animate-float-slow {
-    animation: float-slow 10s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-    animation: spin-slow 20s linear infinite;
-}
-
-.animate-shimmer {
-    background-size: 200% 100%;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-@keyframes float-slow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-shimmer {
-    background-size: 200% 200%;
-    animation: shimmer 3s linear infinite;
-}
-
-.animate-float-slow {
-    animation: float-slow 6s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-    animation: spin 20s linear infinite;
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 1s ease-out forwards;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-@keyframes float-slow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-shimmer {
-    background-size: 200% 200%;
-    animation: shimmer 3s linear infinite;
-}
-
-.animate-float-slow {
-    animation: float-slow 6s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-    animation: spin 20s linear infinite;
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease-out both;
-}
-
-.transition-fade {
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.opacity-0 {
-    opacity: 0;
-    transform: translateY(30px);
-}
+/* ANIMACIONES DE SCROLL */
 
 .opacity-100 {
     opacity: 1;
     transform: translateY(0);
-}
 
-/* === Animaciones generales de entrada y flotación === */
-@keyframes fadeInUp {
-    from {
+    /* Aparece */
+    .fade-in {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    to {
+    .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
     }
-}
 
-@keyframes floatSlow {
-
-    0%,
-    100% {
+    /* Desaparece */
+    .fade-out {
+        opacity: 1;
         transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-out.hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fade-in-out {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+    /* No interactuable cuando invisible */
+}
+
+.fade-in-out.visible {
+    opacity: 1;
+    pointer-events: auto;
+    /* Interactuable cuando visible */
+}
+
+/* Wave de colores para componentes :p */
+.psych-text {
+    background: linear-gradient(270deg,
+            #cbd5e1,
+            #c084fc,
+            #8b5cf6,
+            #818cf8,
+            #cbd5e1,
+            #c084fc,
+            #8b5cf6,
+            #818cf8);
+
+    background-size: 1200% 1200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: psychedelic 35s ease infinite;
+}
+
+@keyframes psychedelic {
+    0% {
+        background-position: 0% 50%;
     }
 
     50% {
-        transform: translateY(-10px);
+        background-position: 100% 50%;
     }
-}
 
-.transition-fade {
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-/* === Para usar con useInView === */
-.animate-fade-in-up {
-    animation: fadeInUp 0.7s ease forwards;
-}
-
-.animate-float-slow {
-    animation: floatSlow 6s ease-in-out infinite;
-}
-
-/* === Brillo sutil para tarjetas === */
-@keyframes pulse-glow {
-
-    0%,
     100% {
-        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.1);
+        background-position: 0% 50%;
     }
-
-    50% {
-        box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.2);
-    }
-}
-
-.animate-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-}
-
-.trippy-bg {
-    position: relative;
-    overflow: hidden;
 }
 
 /* Ajuste para pantallas más pequeñas */
+
 @media (max-width: 1024px) {
     .trippy-bg {
-        background-size: contain; /* Mantiene proporción sin recortar */
+        background-size: contain;
+        /* Mantiene proporción sin recortar */
     }
 }
 
 @media (max-width: 768px) {
     .trippy-bg {
-        background-size: 150%; /* Un poco de zoom para móviles */
+        background-size: 150%;
+        /* Un poco de zoom para móviles */
     }
 }
