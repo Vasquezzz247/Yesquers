@@ -43,11 +43,6 @@ const DropInfo = () => {
                                 <div className="space-y-6">
                                     <div className="bg-gradient-to-r from-violet-900/20 to-indigo-900/20 p-6 rounded-xl border border-violet-600/40 animate-float-slow">
                                         <h4 className="text-xl font-bold text-violet-300 mb-2">rarity 1 of 2500</h4>
-                                        <img
-                                            src={require('../../assets/Yesquers/Gold.png')}
-                                            alt="Ultra rare legendary yesquers"
-                                            className="mb-4 w-full h-auto rounded-lg"
-                                        />
                                         <p className="text-slate-200 font-semibold">The real G</p>
                                         <p className="text-sm text-slate-400 mt-2">Ultra rare legendary yesquers</p>
                                     </div>
@@ -70,6 +65,11 @@ const DropInfo = () => {
                             <div className="flex justify-center items-center">
                                 <div className="bg-gradient-to-br from-purple-900/30 to-violet-900/30 p-8 rounded-xl border border-purple-600/50 text-center animate-float-slow w-full max-w-sm">
                                     <h4 className="text-3xl font-bold text-slate-200 mb-4">YESQUERS 1</h4>
+                                    <img
+                                            src={require('../../assets/Yesquers/Gold.png')}
+                                            alt="Ultra rare legendary yesquers"
+                                            className="mb-4 w-full h-auto rounded-lg"
+                                        />
                                     <div className="space-y-3">
                                         <p className="text-lg text-purple-300">yesquers rarity 25</p>
                                         <p className="text-lg text-violet-300">Yesquers 50 of 2500</p>
