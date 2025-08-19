@@ -1,6 +1,7 @@
 import React from "react";
 import { Zap } from "lucide-react";
 import "./Hero.css";
+import testImage from "../../assets/Yesquers/test1.gif";
 
 const Card = ({
   children,
@@ -33,14 +34,13 @@ const Badge = ({
 );
 
 const useInView = () => {
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible] = React.useState(true);
   const ref = React.useRef(null);
   return { ref, isVisible };
 };
 
 const Hero = () => {
   const { ref, isVisible } = useInView();
-
   return (
     <section className="mb-20 px-4 max-w-7xl mx-auto">
       <div
@@ -91,18 +91,18 @@ const Hero = () => {
                   </Badge>
                 </div>
               </div>
-
               {/* Imagen flotando */}
               <div className="flex justify-center">
                 <div className="relative animate-float-slow">
-                  <div className="w-72 h-72 bg-gradient-to-br from-purple-800 via-violet-900 to-indigo-800 rounded-2xl shadow-2xl shadow-purple-800/40"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-64 h-64 bg-gradient-to-br from-slate-600 via-purple-700 to-violet-700 rounded-2xl flex items-center justify-center text-slate-200 text-lg font-bold">
-                      [GIF Placeholder]
-                    </div>
-                  </div>
+                  {/* Outer glow */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-purple-700 via-violet-700 to-indigo-700 rounded-2xl opacity-40"></div>
                   <div className="absolute -inset-4 bg-gradient-to-r from-slate-700/20 via-purple-600/20 to-violet-600/20 opacity-30"></div>
+                  {/* Imagen encima */}
+                  <img
+                    src={testImage}
+                    alt="Description of the image"
+                    className="relative w-72 h-72 rounded-2xl shadow-2xl shadow-purple-800/40 z-10"
+                  />
                 </div>
               </div>
             </div>
