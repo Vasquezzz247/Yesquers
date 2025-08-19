@@ -34,7 +34,7 @@ const DropInfo = () => {
                                     <div className="inline-flex items-center justify-center gap-2 p-4 rounded-lg">
                                         <Sparkles className="w-6 h-6 text-violet-400 animate-pulse" />
                                         <h3 className="text-2xl font-bold psych-text">
-                                            Drop on 4/20/2024 at 4:20:00 PM
+                                            Drop on 8/29/2025 at 10:00:00 AM
                                         </h3>
                                     </div>
                                 </div>
@@ -43,6 +43,11 @@ const DropInfo = () => {
                                 <div className="space-y-6">
                                     <div className="bg-gradient-to-r from-violet-900/20 to-indigo-900/20 p-6 rounded-xl border border-violet-600/40 animate-float-slow">
                                         <h4 className="text-xl font-bold text-violet-300 mb-2">rarity 1 of 2500</h4>
+                                        <img
+                                            src={require('../../assets/Yesquers/Gold.png')}
+                                            alt="Ultra rare legendary yesquers"
+                                            className="mb-4 w-full h-auto rounded-lg"
+                                        />
                                         <p className="text-slate-200 font-semibold">The real G</p>
                                         <p className="text-sm text-slate-400 mt-2">Ultra rare legendary yesquers</p>
                                     </div>

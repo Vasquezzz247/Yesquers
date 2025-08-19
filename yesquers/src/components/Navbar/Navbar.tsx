@@ -353,7 +353,6 @@ const Navbar = () => {
         <header className="relative z-10 flex justify-between items-center p-6 backdrop-blur-lg bg-black/40 border-b-2 border-purple-600/40 shadow-2xl shadow-purple-900/30">
           <div className="flex items-center space-x-3">
             <span className="w-8 h-8 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full animate-pulse shadow-lg shadow-purple-400/60"></span>
-            {/* 👇 Le metí psych-text para que use el gradiente animado */}
             <h1 className="text-3xl font-bold psych-text drop-shadow-lg">
               YESQUERS
             </h1>
@@ -362,14 +361,27 @@ const Navbar = () => {
             href="https://opensea.io/collection/yesquers"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-gradient-to-r from-purple-700 via-violet-700 to-indigo-700 hover:from-purple-600 hover:via-violet-600 hover:to-indigo-600 text-white font-bold px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300 shadow-xl shadow-purple-600/50 flex items-center justify-center overflow-hidden"
+            className="relative 
+             bg-gradient-to-r from-purple-700 via-violet-700 to-indigo-700 
+             hover:from-purple-600 hover:via-violet-600 hover:to-indigo-600 
+             text-white font-bold 
+             px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-3
+             text-sm sm:text-base md:text-lg
+             rounded-full 
+             transform hover:scale-105 
+             transition-all duration-300 
+             shadow-xl shadow-purple-600/50 
+             flex items-center justify-center 
+             overflow-hidden 
+             w-auto ml-auto"
           >
-            <span className="relative z-10">🌟 Mint yours now</span>
+            {/* mobile version */}
+            <span className="relative z-10 flex sm:hidden">🌟 Mint</span>
+            {/* complete version */}
+            <span className="relative z-10 hidden sm:flex">🌟 Mint yours now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
           </a>
         </header>
-
-
       </div>
     </>
   );
