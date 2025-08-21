@@ -4,7 +4,7 @@
 
 🔗 [yesquer.page](https://yesquer.page)
 
-![Demo](yesquers/src/assets/test1.gif)
+![Demo](yesquers/src/assets/Yesquers/Gold.png)
 
 ```bash
 docker compose up --build
