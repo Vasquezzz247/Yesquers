@@ -1,4 +1,4 @@
-# Yesquers
+# yesquers.vercel.app
 
 **Made by Yesquers for Yesquers**
 
