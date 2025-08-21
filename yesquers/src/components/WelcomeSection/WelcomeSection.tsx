@@ -46,7 +46,7 @@ const WelcomeSection = () => {
                         <div className="flex justify-center gap-6 mb-8">
                             {/* Twitter */}
                             <a
-                                href="https://twitter.com/yesquers"
+                                href="https://x.com/yesquersnft"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-400 hover:text-blue-500 transition-transform transform hover:scale-110"
