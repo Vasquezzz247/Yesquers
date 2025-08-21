@@ -2,7 +2,7 @@
 
 **Made by Yesquers for Yesquers**
 
-🔗 [See the Page](https://yesquers.vercel.app)
+🔗 [yesquer.page](https://yesquer.page)
 
 ![Demo](yesquers/src/assets/test1.gif)
 
