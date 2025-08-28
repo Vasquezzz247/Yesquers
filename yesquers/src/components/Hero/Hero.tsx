@@ -1,37 +1,8 @@
+import { Card, CardContent, Badge } from "../ui/YesquerShades";
 import React from "react";
 import { Zap } from "lucide-react";
 import "./Hero.css";
-import testImage from "../../assets/Yesquers/test1.gif";
-
-const Card = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => <div className={className}>{children}</div>;
-
-const CardContent = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => <div className={className}>{children}</div>;
-
-const Badge = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => (
-  <span
-    className={`px-3 py-1 rounded-full text-sm font-medium border ${className}`}
-  >
-    {children}
-  </span>
-);
+import testImage from "../../assets/Yesquers/GIF_Yesquers.gif";
 
 const useInView = () => {
   const [isVisible] = React.useState(true);

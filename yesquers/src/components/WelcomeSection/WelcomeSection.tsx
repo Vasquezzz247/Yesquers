@@ -1,5 +1,6 @@
+import { Card, CardContent } from "../ui/YesquerShades";
 import useInView from "../../hooks/useInView";
-import nftCalendarLogo from '../../assets/NFTCalendar/nftcalendar-svg-white.svg';
+import nftCalendarLogo from "../../assets/NFTCalendar/nftcalendar-svg-white.svg";
 import GithubIcon from '../../assets/SocialMedia/github-mark-white.png';
 import XIcon from '../../assets/SocialMedia/icons8-x-50.png';
 import OpenSeaIcon from '../../assets/SocialMedia/openseaIcon.png';
@@ -7,14 +8,6 @@ import OpenSeaIcon from '../../assets/SocialMedia/openseaIcon.png';
 
 const WelcomeSection = () => {
     const { ref, isVisible } = useInView();
-
-    const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-        <div className={className}>{children}</div>
-    );
-
-    const CardContent = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-        <div className={className}>{children}</div>
-    );
 
     return (
         <section className="mb-20 px-4 w-full flex justify-center">
@@ -134,7 +127,6 @@ const WelcomeSection = () => {
                                 </a>
                             </div>
                         </div>
-
                     </CardContent>
                 </Card>
             </div>

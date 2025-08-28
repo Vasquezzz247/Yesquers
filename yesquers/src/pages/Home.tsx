@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 import DropInfo from "../components/DropInfo/DropInfo";
 import WelcomeSection from "../components/WelcomeSection/WelcomeSection";
 import Footer from "../components/Footer/Footer";
+import FAQSection from "../components/FaqSection/FaqSection";
 
 const Home = () => (
     <div className="min-h-screen trippy-bg text-white">
@@ -14,10 +15,14 @@ const Home = () => (
             <DropInfo />
         </div>
         <div className="mt-10">
+            <FAQSection />
+        </div>
+        <div className="mt-10">
             <WelcomeSection />
         </div>
         <Footer />
     </div>
 );
+
 
 export default Home;
