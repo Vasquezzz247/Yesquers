@@ -58,11 +58,11 @@ const WelcomeSection = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-orange-500 hover:text-orange-400 transition-transform transform hover:scale-110"
-                                title="Join us on Reddit"
+                                title="Github Profile"
                             >
                                 <img
                                     src={GithubIcon}
-                                    alt="Reddit"
+                                    alt="Github"
                                     className="w-8 h-8"
                                 />
                             </a>
@@ -77,7 +77,7 @@ const WelcomeSection = () => {
                             >
                                 <img
                                     src={OpenSeaIcon}
-                                    alt="Discord"
+                                    alt="OpenSea profile"
                                     className="w-8 h-8"
                                 />
                             </a>
