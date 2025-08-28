@@ -12,9 +12,6 @@ const Home = () => (
             <Hero />
         </div>
         <div className="mt-10">
-            <DropInfo />
-        </div>
-        <div className="mt-10">
             <FAQSection />
         </div>
         <div className="mt-10">
