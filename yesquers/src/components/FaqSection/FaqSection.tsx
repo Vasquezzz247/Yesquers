@@ -2,7 +2,7 @@ import { Card, CardContent } from "../ui/YesquerShades";
 import useInView from "../../hooks/useInView";
 import React, { useCallback, useMemo, useState } from "react";
 
-/** Move data outside render to avoid recreating arrays/strings on every render */
+/** Data fuera del render para no recrearla en cada render */
 const FAQ_ITEMS = [
     {
         question: "What are Yesquers?",
@@ -11,7 +11,8 @@ const FAQ_ITEMS = [
     },
     {
         question: "How many Yesquers are in the collection?",
-        answer: "Only 2,500 unique Yesquers, each one with different skins, traits and rarities.",
+        answer:
+            "Only 2,500 unique Yesquers, each one with different skins, traits and rarities.",
     },
     {
         question: "What blockchain are Yesquers on?",
@@ -57,7 +58,6 @@ const FAQRow = React.memo(function FAQRow({
     return (
         <div
             className={[
-                // Lighter styles: remove per-item backdrop-blur & heavy transforms
                 "bg-black/20 border border-purple-600/30 rounded-lg overflow-hidden",
                 "transition-colors duration-200 hover:border-purple-500/50",
             ].join(" ")}
@@ -99,8 +99,8 @@ const FAQRow = React.memo(function FAQRow({
 });
 
 const FAQSection = () => {
-    // Use once-like behavior to avoid re-animating on every scroll (less work)
-    const { ref, isVisible } = useInView(0.3);
+    // Llama como en los otros componentes para misma sensación de aparición
+    const { ref, isVisible } = useInView();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleFAQ = useCallback((index: number) => {
@@ -111,12 +111,9 @@ const FAQSection = () => {
         <section className="mb-20 px-4 w-full flex justify-center">
             <div
                 ref={ref}
-                className={[
-                    "w-full max-w-[100rem] transform transition-opacity duration-600",
-                    isVisible ? "opacity-100" : "opacity-0",
-                ].join(" ")}
+                className={`transition-fade duration-700 ${isVisible ? "opacity-100" : "opacity-0"
+                    } w-full max-w-[100rem]`}
             >
-                {/* Lighter outer styles: keep palette, reduce shadow cost slightly */}
                 <Card className="w-full bg-black/40 backdrop-blur-lg border-2 border-purple-600/40 shadow-xl shadow-purple-900/20">
                     <CardContent className="p-12 w-full text-center text-slate-200">
                         <h2 className="text-4xl font-bold psych-text mb-6">

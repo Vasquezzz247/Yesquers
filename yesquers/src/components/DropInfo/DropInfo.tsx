@@ -2,6 +2,7 @@ import { Card, CardContent, Badge } from "../ui/YesquerShades";
 import { Sparkles, Image as ImageIcon } from "lucide-react";
 import useInView from "../../hooks/useInView";
 import Gold from "../../assets/Yesquers/Gold.jpeg";
+import yesq from "../../assets/Yesquers/yesq.png";
 import "./DropInfo.css";
 
 type RarityKey = "common" | "special" | "epic" | "legendary";
@@ -10,7 +11,7 @@ type RarityItem = {
     key: RarityKey;
     title: string;
     subtitle: string;
-    imageSrc?: string; // put your real image path here; placeholder will show if missing
+    imageSrc?: string;
 };
 
 const rarityItems: RarityItem[] = [
@@ -18,25 +19,25 @@ const rarityItems: RarityItem[] = [
         key: "common",
         title: "Common Yesquer",
         subtitle: "All gray traits",
-        // imageSrc: "/assets/yesquers/common-1.jpg",
+        imageSrc: yesq,
     },
     {
         key: "special",
         title: "Special Yesquer",
         subtitle: "gray/blue traits",
-        // imageSrc: "/assets/yesquers/special-1.jpg",
+        imageSrc: yesq,
     },
     {
         key: "epic",
         title: "Epic Yesquer",
         subtitle: "At least one purple trait",
-        // imageSrc: "/assets/yesquers/epic-1.jpg",
+        imageSrc: yesq,
     },
     {
         key: "legendary",
         title: "Legendary Yesquer",
         subtitle: "At least one gold trait",
-        // imageSrc: "/assets/yesquers/legendary-1.jpg",
+        imageSrc: yesq,
     },
 ];
 
